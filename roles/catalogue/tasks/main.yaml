@@ -1,15 +1,15 @@
 - name: app setup
-  tags: 
-  - deployment
+  #tags: 
+  #- deployment
   ansible.builtin.import_role:
     name: common
     tasks_from: app-setup.yaml
 
 - name: nodejs setup
-  tags: 
-  - deployment
-  #ansible.builtin.import_role:
-  ansible.builtin.include_role:
+  #tags: 
+  #- deployment
+  ansible.builtin.import_role:
+  #ansible.builtin.include_role:
     name: common
     tasks_from: nodejs-setup.yaml
 
@@ -29,11 +29,11 @@
     state: present
 
 - name: check products loaded
-  ansible.builtin.command: mongosh --host "{{ MONGODB_HOST }}" --quiet  --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
+  ansible.builtin.command: mongosh --host "{{ mongodb_host }}" --quiet  --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
 
 - name: load the products
-  ansible.builtin.shell: mongosh --host "{{ MONGODB_HOST }}" </app/db/master-data.js
+  ansible.builtin.shell: mongosh --host "{{ mongodb_host }}" </app/db/master-data.js
   when: catalogue_output.stdout  | int < 0
 
 - name: start catalogue
