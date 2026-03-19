@@ -1,7 +1,7 @@
 ansible_username: ec2-user
 ansible_password: DevOps321
-mongodb_host: mongodb.sowjanya.fun
-catalogue_host: catalogue.sowjanya.fun
+mongodb_host: mongodb-dev.sowjanya.fun
+catalogue_host: catalogue-dev.sowjanya.fun
 redis_host: redis-dev.sowjanya.fun
 user_host: user-dev.sowjanya.fun
 cart_host: cart-dev.sowjanya.fun
