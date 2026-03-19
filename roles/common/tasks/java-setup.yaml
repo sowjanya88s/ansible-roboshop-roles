@@ -8,5 +8,5 @@
 
 - name: installing dependancies
   ansible.builtin.command: mvn clean package
-    args:         
+  args:         
       chdir: /app
