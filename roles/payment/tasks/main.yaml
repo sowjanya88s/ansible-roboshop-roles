@@ -32,3 +32,9 @@
      executable: pip3.9
   args:
      chdir: /app
+
+- name: restart and enabling payment
+  ansible.builtin.service: 
+      name: payment
+      state: restarted
+      enabled: yes
