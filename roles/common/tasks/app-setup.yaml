@@ -16,7 +16,7 @@
       path: /app
       state: directory
 
-- name: delete catalogue zip file
+- name: delete {{ component }} zip file
   ansible.builtin.file:
       path: /tmp/{{ component }}.zip
       state: absent
