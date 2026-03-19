@@ -5,13 +5,13 @@
     name: common
     tasks_from: app-setup.yaml
 
-- name: nodejs setup
+- name: python setup
   #tags: 
   #- deployment
   ansible.builtin.import_role:
   #ansible.builtin.include_role:
     name: common
-    tasks_from: nodejs-setup.yaml
+    tasks_from: python-setup.yaml
 
 - name: systemd setup
   ansible.builtin.import_role:
