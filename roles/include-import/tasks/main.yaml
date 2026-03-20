@@ -1,5 +1,5 @@
 - name: include vs import
-  ansible.builtin.include_role:
+  ansible.builtin.import_role:
     name: common
     tasks_from: import-include.yaml
   when: os == "RedHat"
