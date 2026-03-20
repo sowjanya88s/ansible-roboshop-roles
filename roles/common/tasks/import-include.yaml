@@ -3,7 +3,7 @@
    msg: "print from play-1"
 
 - name: from play-2
-  ansible.builtin.debug:
+  ansible.builtin.ddebug:
    msg: "print from play-2"
 
 - name: from play-3
