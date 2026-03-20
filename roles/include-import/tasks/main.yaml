@@ -3,3 +3,6 @@
     name: common
     tasks_from: import-include.yaml
   when: os == "RedHat"
+  loop:
+  - ramesh
+  - suresh
