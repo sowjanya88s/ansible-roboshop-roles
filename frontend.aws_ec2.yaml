@@ -1,14 +1,13 @@
 plugin: amazon.aws.aws_ec2
 regions:
 - us-east-1
-hostnames:
-  # This option allows displaying the public ip addresses.
-  - private-ip-address
 filters:
   # This selects only running instances with tag `Environment` tag set to `dev`.
   tag:Environment: dev
   instance-state-name : running
+hostnames:
+  # This option allows displaying the public ip addresses.
+  - private-ip-address
 keyed_groups:
-# This creates host groups based on architecture.
 - prefix: ''
   key:Component: "frontend-dev"
