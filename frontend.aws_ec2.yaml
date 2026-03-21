@@ -6,8 +6,8 @@ hostnames:
  - private-ip-address
 filters:
   # This selects only running instances with tag `Environment` tag set to `dev`.
-  tag:Name: frontend-dev
   instance-state-name : running
+  tag:Name: frontend-dev
 compose:
  ansible_host: private_ip_address
 keyed_groups:
