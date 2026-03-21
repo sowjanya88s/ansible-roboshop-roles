@@ -7,7 +7,7 @@ filters:
   instance-state-name : running
 hostnames:
   # This option allows displaying the public ip addresses.
-  - private-ip-address
+ - private-ip-address
 keyed_groups:
 - prefix: ''
-  key:Component: "frontend"
+  key:Name: "frontend-dev"
