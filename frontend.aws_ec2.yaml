@@ -3,11 +3,11 @@ regions:
 - us-east-1
 filters:
   # This selects only running instances with tag `Environment` tag set to `dev`.
-  tag:Environment: dev
+  tag:Env: dev
   instance-state-name : running
 hostnames:
   # This option allows displaying the public ip addresses.
   - private-ip-address
 keyed_groups:
 - prefix: ''
-  key:Component: "frontend-dev"
+  key:Component: "frontend"
